@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Customer;
 use App\Company;
 
-class CustomersController extends Controller
+class CustomerController extends Controller
 {
     public function index(){
         $customers = Customer::all();
@@ -34,6 +34,10 @@ class CustomersController extends Controller
     public function update(Customer $customer){
         $customer->update($this->validateRequest());
         return redirect()->route('customers.show', compact('customer'));
+    }
+    public function destroy(Customer $customer){
+        $customer->delete();
+        return redirect()->route('customers.index');
     }
     private function validateRequest(){
         return request()->validate([

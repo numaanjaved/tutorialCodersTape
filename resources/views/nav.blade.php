@@ -14,7 +14,7 @@
                                 <a class="nav-link" href="/about">About</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="contact">Contact</a>
+                                <a class="nav-link" href="{{route('contacts.create')}}">Contact</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{route('customers.index')}}">Customers</a>
