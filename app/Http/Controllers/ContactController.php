@@ -43,7 +43,7 @@ class ContactController extends Controller
             'message' => 'required'
         ]);
         Mail::to('test@test.com')->send(new ContactMail($data));
-        dd($request->all());
+       return redirect()->route('contacts.create')->with('message', "Thanks for your message, We'll be in touch.");
     }
 
     /**

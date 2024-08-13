@@ -31,3 +31,7 @@ Route::get('about', 'AboutController@index')->name('about');
 
 Route::resource('customers', 'CustomerController');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

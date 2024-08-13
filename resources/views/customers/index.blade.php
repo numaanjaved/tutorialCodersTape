@@ -1,7 +1,7 @@
-@extends('layout')
+@extends('layouts.app')
 
 @section('title', 'Customers')
-   
+
 @section('content')
 <div class="row">
     <div class="col-12">
@@ -13,20 +13,20 @@
 </div>
 <hr>
 @foreach($customers as $customer)
-    <div class="row"> 
+    <div class="row">
         <div class="col-2">
             {{$customer->id}}
-        </div>   
+        </div>
         <div class="col-4">
             <a href="{{route('customers.show', ['customer' => $customer])}}">{{$customer->name}}</a>
-        </div>  
+        </div>
         <div class="col-4">
             {{$customer->email}}
-        </div>  
+        </div>
         <div class="col-2">
             {{$customer->active}}
         </div>
     </div>
-@endforeach 
+@endforeach
 
 @endsection

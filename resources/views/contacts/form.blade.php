@@ -1,4 +1,5 @@
-@csrf
+<form action="{{route('contacts.store')}}" method="POST">
+            @csrf
             <label for="name">Name: </label>
             <div class="form-group">
                 <input type="text" name="name" value="{{old('name')}}" class="form-control">
@@ -16,4 +17,8 @@
             </div>
             <div>{{$errors->first('message')}}</div>
             <hr>
-            
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Send Email</button>
+            </div>
+
+        </form>

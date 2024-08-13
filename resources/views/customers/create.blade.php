@@ -1,7 +1,7 @@
-@extends('layout')
+@extends('layouts.app')
 
 @section('title', 'Add New Customer')
-   
+
 @section('content')
 
 <div class="row">
@@ -11,7 +11,7 @@
             <div class="form-group">
                 <button type="submit" class="btn btn-primary">Add Customer</button>
             </div>
-            
+
         </form>
     </div>
 </div>

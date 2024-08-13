@@ -1,21 +1,25 @@
-@extends('layout')
+@extends('layouts.app')
 
 @section('title', 'Contact Us')
-   
+
 @section('content')
 
 <div class="row">
     <div class="col-12"><h1>Contact Us</h1></div>
 </div>
+
 <div class="row">
     <div class="col-12">
-        <form action="{{route('contacts.store')}}" method="POST">
-            @include('contacts.form');
-            <div class="form-group">
-                <button type="submit" class="btn btn-primary">Send Email</button>
+        @if(session()->has('message'))
+            <div class="alert alert-primary" role="alert">
+                {{session()->get('message')}}
             </div>
-            
-        </form>
+        @else
+            @include('contacts.form');
+        @endif
+
+
+
     </div>
 </div>
 @endsection

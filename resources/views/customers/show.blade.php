@@ -1,7 +1,7 @@
-@extends('layout')
+@extends('layouts.app')
 
 @section('title', 'Customer Detail')
-   
+
 @section('content')
 
 <div class="row">
